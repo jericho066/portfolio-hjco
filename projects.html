@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Browse my portfolio of web development projects - React applications, responsive websites, and custom web solutions.">
+	<meta name="keywords" content="portfolio, projects, web development, react projects, Jerico Oliver">
+	<meta name="author" content="Jerico Oliver">
+
+	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#0f0f23" media="(prefers-color-scheme: dark)">
+	
+	<title>Projects - Jerico Oliver</title>
+	
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+	<link rel="icon" href="/assets/img/me/logo.png">
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="/assets/css/base.css">
+	<link rel="stylesheet" href="/assets/css/layout.css">
+	<link rel="stylesheet" href="/assets/css/components.css">
+	<link rel="stylesheet" href="/assets/css/utils.css">
+</head>
+<body>
+
+	<a href="#main-content" class="skip-to-content">Skip to content</a>
+	
+	<div id="header"></div>
+	
+	<!-- Main Content -->
+	<main id="main-content">
+		<!-- Page Header -->
+		<section class="page-hero">
+			<div class="page-hero-pattern"></div>
+			<div class="page-hero-shape page-hero-shape-1"></div>
+			<div class="page-hero-shape page-hero-shape-2"></div>
+			<div class="page-hero-shape page-hero-shape-3"></div>
+			<div class="page-hero-shape page-hero-shape-4"></div>
+			<div class="page-hero-sparkle"></div>
+			<div class="page-hero-sparkle"></div>
+			<div class="page-hero-sparkle"></div>
+			<div class="page-hero-sparkle"></div>
+			<div class="page-hero-sparkle"></div>
+
+			<div class="container text-center">
+				<h1>My Projects</h1>
+				<p>
+					A collection of web applications and sites I've built. Each project showcases different skills and technologies.
+				</p>
+			</div>
+		</section>
+		
+		<!-- Filters -->
+		<section class="section-sm">
+			<div class="container">
+				<div class="flex gap-md justify-center flex-wrap" id="projectFilters" data-animate>
+					<button class="btn btn-sm filter-btn active" data-filter="all">All Projects</button>
+					<button class="btn btn-sm filter-btn" data-filter="react">React</button>
+					<button class="btn btn-sm filter-btn" data-filter="vanilla">Vanilla JS</button>
+					<button class="btn btn-sm filter-btn" data-filter="featured">Featured</button>
+					
+				</div>
+			</div>
+		</section>
+		
+		<!-- Projects Grid -->
+		<section class="section-lg">
+			<div class="container">
+				<div class="project-grid" id="projectsContainer">
+					<!-- Projects will be loaded here dynamically from projects.json -->
+					<div class="text-center" style="grid-column: 1/-1;">
+						<p class="text-secondary">Loading projects...</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- CTA Section -->
+		<section class="section-lg bg-surface">
+			<div class="container text-center">
+				<div class="max-w-2xl mx-auto" data-animate>
+					<h2 class="text-4xl font-bold mb-md">Like What You See?</h2>
+					<p class="text-xl text-secondary mb-2xl">
+						Let's discuss how I can help bring your project to life with clean code and great design.
+					</p>
+					<a href="/contact.html" class="btn btn-primary btn-lg">Get In Touch</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<!-- Footer -->
+	<div id="footer"></div>
+	
+	<!-- Scripts -->
+	<script src="/assets/js/main.js"></script>
+	<script src="/assets/js/projects.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+echo "# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Temp
+*.tmp
+*.log
+
+# Build (if you add build tools later)
+node_modules/
+dist/
+.cache/" > .gitignore
+

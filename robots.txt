@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jericooliver.com/sitemap.xml

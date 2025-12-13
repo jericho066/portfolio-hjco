@@ -1,0 +1,842 @@
+{
+	"projects": [
+		{
+			"id": 1,
+			"slug": "dishlyst",
+			"title": "Dishlyst Recipe Finder",
+			"shortDescription": "A modern, React-based recipe search application that makes finding and saving meal ideas effortless",
+			"overview": "Dishlyst is a streamlined recipe finder designed for the modern web. Built with simplicity and user experience at its core, it helps users discover meal ideas from ingredients they already have. The application combines real-time search, favorite recipes management, and shopping list functionality into one responsive, intuitive interface.",
+			"category": "react",
+			"featured": true,
+			"heroImage": "/assets/img/projects/dishlyst/feature.png",
+			"techStack": [
+				{
+					"name": "React",
+					"icon": "ri-reactjs-line",
+					"color": "#61DAFB",
+					"bg": "rgba(97, 218, 251, 0.2)",
+					"description": "Component-based architecture for reusable UI elements and efficient state management"
+				},
+				{
+					"name": "TheMealDB API",
+					"icon": "bi-plug",
+					"color": "#8B5CF6",
+					"bg": "rgba(139, 92, 246, 0.2)",
+					"description": "Structured recipe data including images, instructions, and ingredient lists"
+				},
+				{
+					"name": "CSS",
+					"icon": "bi-palette",
+					"color": "#2965f1",
+					"bg": "rgba(41, 101, 241, 0.2)",
+					"description": "Modern layout techniques for responsive, adaptive design across all devices"
+				},
+				{
+					"name": "LocalStorage",
+					"icon": "bi-floppy",
+					"color": "#10b981",
+					"bg": "rgba(16, 185, 129, 0.2)",
+					"description": "Client-side persistence for favorites and shopping lists without backend dependencies"
+				},
+				{
+					"name": "Bootstrap Icons",
+					"icon": "bi-bootstrap",
+					"color": "#7952B3",
+					"bg": "rgba(121, 82, 179, 0.2)",
+					"description": "Lightweight, scalable iconography for consistent visual language"
+				},
+				{
+					"name": "Modern JavaScript",
+					"icon": "bi-code-slash",
+					"color": "#ea580c",
+					"bg": "rgba(234, 88, 12, 0.2)",
+					"description": "ES6+ features including async/await, destructuring, and arrow functions"
+				}
+			],
+			"liveUrl": "https://jericho066.github.io/dishlyst/",
+			"repoUrl": "https://github.com/jericho066/dishlyst",
+			"client": "Personal Project",
+			"role": "Frontend Developer & Designer",
+			"timeline": "2 Weeks (2024)",
+			"metaRole": "Frontend Developer & Designer",
+			"metaTimeline": "2 Weeks (2024)",
+			"metaTech": "React, API Integration, CSS",
+			"problem": "Most recipe websites overwhelm users with cluttered interfaces, intrusive ads, and slow search experiences. Users need a fast, clean way to discover meal ideas without the frustration.",
+			"solution": "A single-page React application with real-time search, instant results, and persistent storage for favorites. Clean design prioritizes content over clutter, making recipe discovery enjoyable.",
+			"impact": "Users can find recipes in under 2 seconds, save their favorites offline, and access a distraction-free cooking experience across all devices.",
+			"problemGoal": [
+				"Home cooks looking for quick dinner ideas often encounter recipe websites that are cluttered, slow, or overly complicated. Many sites prioritize advertisements over user experience, making simple tasks frustrating.",
+				"My goal was to create a <strong>simple, fast, and focused</strong> recipe finder that prioritizes user needs. This project also served as an opportunity to deepen my understanding of <strong>React state management</strong>, <strong>API integration</strong>, and <strong>responsive design patterns</strong>."
+			],
+			"process": [
+				{
+					"number": "1",
+					"title": "Research & Planning",
+					"description": "I began by analyzing popular recipe apps and identifying common pain points. Users wanted frictionless search, easy ways to save recipes, and simple navigation. I outlined three core features: Search, Favorites, and Shopping List, ensuring all functionality remained accessible within a single, intuitive layout."
+				},
+				{
+					"number": "2",
+					"title": "Design Decisions",
+					"description": "The visual design embraced minimalism with clean typography, orange accents (#ea580c), and neutral backgrounds. Recipe cards highlight essential information—name, cuisine, category, and image—without unnecessary clutter. The detail view mimics the familiar experience of reading a traditional recipe card."
+				},
+				{
+					"number": "3",
+					"title": "Technical Implementation",
+					"description": "Built with React for efficient component reusability and state management. Integrated TheMealDB API for comprehensive recipe data. Implemented CSS Grid and Flexbox for responsive layouts, and used localStorage for offline persistence of user favorites and shopping lists.",
+					"features": [
+						{
+							"icon": "bi-search",
+							"text": "Real-time recipe search with instant results and debounced API calls"
+						},
+						{
+							"icon": "bi-heart",
+							"text": "Save favorite recipes with localStorage persistence"
+						},
+						{
+							"icon": "bi-cart",
+							"text": "Shopping list feature for tracking ingredients"
+						},
+						{
+							"icon": "bi-phone",
+							"text": "Fully responsive design for all screen sizes"
+						}
+					]
+				}
+			],
+			"challenges": [
+				{
+					"title": "API Rate Limits",
+					"problem": "TheMealDB's free API tier imposed request restrictions, which became problematic during active search sessions with multiple rapid queries.",
+					"solution": "Implemented input debouncing (300ms delay) to reduce unnecessary API calls while maintaining real-time feel. Added caching mechanism using localStorage to store recent search results, significantly reducing redundant API requests."
+				},
+				{
+					"title": "Mobile Responsiveness",
+					"problem": "The initial grid layout made recipe cards appear cramped and difficult to interact with on smaller mobile screens.",
+					"solution": "Redesigned the grid system using CSS Grid's <code>auto-fit</code> and <code>minmax()</code> functions to automatically adapt column count based on available space. This created a fluid, responsive layout that works seamlessly across all device sizes."
+				}
+			],
+			"results": [
+				{
+					"icon": "bi-lightning-charge",
+					"color": "#F97316",
+					"title": "Fast Performance",
+					"description": "Average search results load in under 2 seconds with optimized API calls and caching"
+				},
+				{
+					"icon": "bi-phone",
+					"color": "#3B82F6",
+					"title": "Fully Responsive",
+					"description": "Seamless experience across all devices with adaptive layouts and touch-friendly interfaces"
+				},
+				{
+					"icon": "bi-hand-thumbs-up",
+					"color": "#10B981",
+					"title": "Intuitive UX",
+					"description": "Clean interface and clear navigation allow users to find recipes effortlessly"
+				},
+				{
+					"icon": "bi-shield-check",
+					"color": "#8B5CF6",
+					"title": "Reliable",
+					"description": "Graceful error handling and offline storage ensure smooth user experience"
+				}
+			],
+			"lessons": [
+				{
+					"title": "API Integration Best Practices",
+					"description": "Learned to manage async operations effectively with proper error handling, loading states, and user feedback. Understanding rate limits and implementing smart caching strategies is crucial for API-dependent applications."
+				},
+				{
+					"title": "Responsive Design Mastery",
+					"description": "Deepened my understanding of modern CSS layout techniques. Using CSS Grid's auto-fit and minmax functions creates truly flexible layouts that adapt naturally to any screen size without media query overload."
+				},
+				{
+					"title": "React State Management",
+					"description": "Gained hands-on experience managing complex application state across multiple components. Learning when to lift state up versus using local component state improved my React architecture decisions."
+				},
+				{
+					"title": "Performance Optimization",
+					"description": "Discovered that perceived performance is as important as actual performance. Implementing loading skeletons, debouncing, and lazy loading significantly improved the user experience even on slower connections."
+				},
+				{
+					"title": "User-First Design Thinking",
+					"description": "Realized that simplicity and usability trump feature bloat. Focusing on core user needs and removing unnecessary complexity creates more delightful experiences than adding every possible feature."
+				}
+			],
+			"gallery": [
+				{
+					"image": "/assets/img/projects/dishlyst/search.png",
+					"title": "Search Recipes",
+					"description": "Find dishes easily by typing keywords or ingredients."
+				},
+				{
+					"image": "/assets/img/projects/dishlyst/favorites.png",
+					"title": "Save Favorites",
+					"description": "Bookmark your favorite meals to access them later."
+				},
+				{
+					"image": "/assets/img/projects/dishlyst/shopping.png",
+					"title": "Shopping List",
+					"description": "Add recipe ingredients directly to your personal shopping list."
+				}
+			]
+		},
+
+
+		{
+			"id": 2,
+			"slug": "monivra",
+			"title": "Monivra Expense Tracker",
+			"shortDescription": "A modern, intuitive expense tracking application built with React that helps users track income and expenses",
+			"overview": "Monivra is a modern expense tracking web application designed to help individuals take control of their personal finances. It allows users keep track of their income and expenses, see how they spend their money through charts, and handle transactions quickly, all while keeping the information on their own device for privacy.",
+			"category": "react",
+			"featured": true,
+			"heroImage": "/assets/img/projects/monivra/feature.png",
+			"techStack": [
+				{
+					"name": "React",
+					"icon": "ri-reactjs-line",
+					"color": "#61DAFB",
+					"bg": "rgba(97, 218, 251, 0.2)",
+					"description": "Used for building reusable components and managing state efficiently across pages."
+				},
+				{
+					"name": "Recharts",
+					"icon": "bi-bar-chart",
+					"color": "#EAB308",
+					"bg": "rgba(234, 179, 8, 0.2)",
+					"description": "Implemented for creating interactive charts to visualize income and expenses dynamically."
+				},
+				{
+					"name": "CSS",
+					"icon": "bi-palette",
+					"color": "#2965F1",
+					"bg": "rgba(41, 101, 241, 0.2)",
+					"description": "Crafted responsive and modern layouts using Flexbox and Grid, ensuring consistency across devices."
+				},
+				{
+					"name": "Bootstrap Icons",
+					"icon": "bi-bootstrap",
+					"color": "#7952B3",
+					"bg": "rgba(121, 82, 179, 0.2)",
+					"description": "Enhanced visual clarity and navigation through consistent and lightweight iconography."
+				},
+				{
+					"name": "LocalStorage",
+					"icon": "bi-floppy",
+					"color": "#10B981",
+					"bg": "rgba(16, 185, 129, 0.2)",
+					"description": "Used to store all user transactions directly in the browser for privacy and offline accessibility."
+				}
+			],
+			"liveUrl": "https://jericho066.github.io/monivra/",
+			"repoUrl": "https://github.com/jericho066/monivra",
+			"client": "Personal Project",
+			"role": "Web Developer & UI Designer",
+			"timeline": "2024",
+			"metaRole": "Web Developer & UI Designer",
+			"metaTimeline": "2024",
+			"metaTech": "React, Recharts, LocalStorage",
+			"problem": "A lot of personal finance tools are either overly complicated, subscription-based, or have users handing over sensitive financial data on the internet.",
+			"solution": "Built a fully local, intuitive, and visually engaging expense tracker that helps users understand their spending without depending on external servers.",
+			"impact": "Users can track finances privately with instant access, clear visual insights, and full control over their data without any cloud dependency.",
+			"problemGoal": [
+				"Most expense tracker apps are tied to accounts or cloud services, which can discourage users who prefer privacy or simplicity.",
+				"My goal with Monivra was to build a <strong>fully local</strong>, <strong>intuitive</strong>, and <strong>visually engaging</strong> expense tracker that helps users understand their spending without depending on external servers."
+			],
+			"process": [
+				{
+					"number": "1",
+					"title": "Planning",
+					"description": "I started by outlining the core use cases: recording transactions, viewing summaries, and visualizing data. I sketched a layout with three main views: Dashboard, Analytics, and Add Transaction to ensure smooth navigation between them."
+				},
+				{
+					"number": "2",
+					"title": "Design Choices",
+					"description": "I chose a clean, data-focused UI with calm blue and neutral tones to make the app feel professional and easy to read. Icons and subtle animations guide the user's attention without overwhelming the interface. The goal was to make financial tracking feel simple and approachable."
+				},
+				{
+					"number": "3",
+					"title": "Core Features",
+					"description": "Built comprehensive expense tracking features with visual analytics and data export capabilities for complete financial management.",
+					"features": [
+						{
+							"icon": "ri-add-line",
+							"text": "Add income and expense transactions with category tagging and notes"
+						},
+						{
+							"icon": "ri-bar-chart-2-line",
+							"text": "Visual analytics using bar and pie charts to display spending trends"
+						},
+						{
+							"icon": "ri-calendar-line",
+							"text": "Monthly overview and navigation for reviewing previous transactions"
+						},
+						{
+							"icon": "ri-database-2-line",
+							"text": "Local data persistence using browser localStorage"
+						},
+						{
+							"icon": "ri-download-line",
+							"text": "Export transactions in CSV or JSON format for personal backups"
+						},
+						{
+							"icon": "ri-arrow-go-back-line",
+							"text": "Undo delete feature to recover recently removed transactions"
+						}
+					]
+				}
+			],
+			"challenges": [
+				{
+					"title": "Incorrect Category Mapping for Income",
+					"problem": "When adding income transactions, the app initially defaulted to expense categories like Food & Dining instead of Salary or Other Income.",
+					"solution": "Implemented logic to dynamically filter category options based on transaction type that showing only income-related categories when the user selects 'Income'. This improved accuracy and user experience."
+				},
+				{
+					"title": "Data Consistency Bugs",
+					"problem": "Some transactions persisted incorrectly in localStorage during development testing.",
+					"solution": "Added a localStorage reset utility and validation checks to ensure clean data handling during demos and updates."
+				}
+			],
+			"results": [
+				{
+					"icon": "bi-phone",
+					"color": "#3B82F6",
+					"title": "Responsive Layout",
+					"description": "Looks and functions seamlessly across desktop, tablet, and mobile devices."
+				},
+				{
+					"icon": "bi-lightning-charge",
+					"color": "#F97316",
+					"title": "Fast Performance",
+					"description": "Instant page transitions and local data access create a smooth and responsive experience."
+				},
+				{
+					"icon": "bi-graph-up",
+					"color": "#FACC15",
+					"title": "Clear Insights",
+					"description": "Interactive visual analytics help users instantly understand where their money goes."
+				},
+				{
+					"icon": "bi-person-lock",
+					"color": "#10B981",
+					"title": "Private & Offline",
+					"description": "All data stays in the user's browser: no login, no server, no data sharing."
+				}
+			],
+			"lessons": [
+				{
+					"title": "Scalable React Architecture",
+					"description": "Improved my ability to structure scalable React projects with clean and maintainable state management."
+				},
+				{
+					"title": "Data Visualization",
+					"description": "Gained practical experience with data visualization using Recharts and understanding how users interpret charts."
+				},
+				{
+					"title": "UX Clarity in Financial Tools",
+					"description": "Learned the importance of UX clarity especially when designing financial tools where precision and simplicity matter most."
+				},
+				{
+					"title": "Browser Data Persistence",
+					"description": "Strengthened debugging and problem-solving skills when working with persistent browser data and user state synchronization."
+				}
+			],
+			"gallery": [
+				{
+					"image": "/assets/img/projects/monivra/analytics.png",
+					"title": "Analytics",
+					"description": "Visualize your spending habits with detailed Pie and Bar charts for income and expenses over the past months."
+				},
+				{
+					"image": "/assets/img/projects/monivra/dashboard.png",
+					"title": "Dashboard",
+					"description": "Get an overview of your monthly balance, income, and expenses with quick summaries and filters for better tracking."
+				},
+				{
+					"image": "/assets/img/projects/monivra/transactions.png",
+					"title": "Add Transaction",
+					"description": "Easily add new income or expense entries with categorized options, notes, and date selection."
+				}
+			]
+		},
+		
+		{
+			"id": 3,
+			"slug": "creavyn",
+			"title": "Creavyn Portfolio Builder",
+			"shortDescription": "A visual portfolio builder that helps developers create professional portfolios without writing code",
+			"overview": "Creavyn is a no-code portfolio builder designed specifically for developers who want to showcase their work without spending hours on design and development. It bridges the gap between generic website builders and custom-coded portfolios by offering a developer-focused, intuitive interface with powerful customization options. The goal was to create a tool that respects the creative process while dramatically reducing the time from concept to deployment.",
+			"category": "react",
+			"featured": true,
+			"heroImage": "/assets/img/projects/creavyn/feature.png",
+			"techStack": [
+				{
+					"name": "React",
+					"icon": "ri-reactjs-line",
+					"color": "#61DAFB",
+					"bg": "rgba(97, 218, 251, 0.2)",
+					"description": "Powers the component architecture and manages complex state across the builder interface."
+				},
+				{
+					"name": "React Router",
+					"icon": "bi-signpost-split",
+					"color": "#F44250",
+					"bg": "rgba(244, 66, 80, 0.2)",
+					"description": "Handles navigation between template selection and the builder interface with state passing."
+				},
+				{
+					"name": "JavaScript",
+					"icon": "bi-code-square",
+					"color": "#F7DF1E",
+					"bg": "rgba(247, 223, 30, 0.2)",
+					"description": "Custom utilities for history management, file export, validation, and data transformation."
+				},
+				{
+					"name": "CSS",
+					"icon": "bi-palette",
+					"color": "#2965F1",
+					"bg": "rgba(41, 101, 241, 0.2)",
+					"description": "Creates responsive, adaptive layouts that work seamlessly across all device sizes."
+				},
+				{
+					"name": "LocalStorage",
+					"icon": "bi-floppy",
+					"color": "#10B981",
+					"bg": "rgba(16, 185, 129, 0.2)",
+					"description": "Enables auto-save, draft persistence, and offline functionality without backend dependencies."
+				},
+				{
+					"name": "Bootstrap Icons",
+					"icon": "bi-bootstrap",
+					"color": "#7952B3",
+					"bg": "rgba(121, 82, 179, 0.2)",
+					"description": "Provides consistent, lightweight iconography throughout the interface."
+				}
+			],
+			"liveUrl": "https://creavyn.vercel.app/",
+			"repoUrl": "https://github.com/jericho066/creavyn",
+			"client": "Personal Project",
+			"role": "Web Developer & UI/UX Designer",
+			"timeline": "2024",
+			"metaRole": "Web Developer & UI/UX Designer",
+			"metaTimeline": "2024",
+			"metaTech": "React, React Router, JavaScript",
+			"problem": "Developers often struggle to find time to build or maintain their portfolios, and existing builders lack the flexibility and developer-friendly features they need.",
+			"solution": "Created a developer-focused, no-code portfolio builder with live preview, drag-and-drop project reordering, and powerful customization options.",
+			"impact": "Users can go from blank canvas to exported portfolio in under 10 minutes with clean, semantic HTML output and full responsive design.",
+			"problemGoal": [
+				"Developers often run into this chicken and egg situation when making a portfolio. They need some projects to impress employers. But putting together the portfolio turns into yet another <strong>big time sink</strong>. Those basic website makers come off as too restrictive. Coding everything from the ground up eats up hours that developers just do not have.",
+				"I set out to build something in between. A tool that works quickly and bends to fit what they need. It should feel right for developers. That way they can <strong>stick to their actual projects</strong>. Not waste effort on the setup stuff."
+			],
+			"process": [
+				{
+					"number": "1",
+					"title": "The Problem",
+					"description": "I got pretty tired of starting my portfolio website over from nothing every few months. Copying in old projects, tweaking the colors, and dealing with those responsive design issues, it all felt so repetitive and draining. It hit me that plenty of other developers must be dealing with the exact same annoyance. So I started thinking about this idea. What if there was a way to create a clean, professional portfolio in only fifteen minutes, and without writing a single line of code. That whole concept turned into Creavyn."
+				},
+				{
+					"number": "2",
+					"title": "Design Philosophy",
+					"description": "Instead of being overwhelming, I wanted the builder to feel intuitive and empowering. You can see changes immediately thanks to the two-column layout (form left, live preview right); what you edit is what you get. For a sleek, tech-forward feel, I went with a blue-to-purple gradient and slick animations to give interactions a professional feel. Each button was color-coded: orange for load (warmth), purple for save (creative), red for delete (caution), and green for export (success). The goal was to make complex features feel simple."
+				},
+				{
+					"number": "3",
+					"title": "Technical Architecture",
+					"description": "The application has a component-based architecture and is a single-page React application. Props from a central Builder component handle state management, while a custom HistoryManager class handles history tracking. LocalStorage is used to store all user data in-browser for persistence, and JSON export options are available for version control compatibility."
+				},
+				{
+					"number": "4",
+					"title": "Mobile-First Approach",
+					"description": "I prioritized mobile design because if it functions on a phone, it will function anywhere. Projects collapse to conserve screen real estate, buttons are touch-friendly, and the hamburger menu slides in seamlessly. To ensure drag-and-drop felt natural with fingers as opposed to just a mouse, I conducted tests on actual devices. Before exporting, users must see how their portfolio changes, so the device preview toggle (desktop, tablet, and mobile) was crucial."
+				},
+				{
+					"number": "5",
+					"title": "Core Features",
+					"description": "Implemented comprehensive portfolio building features with live preview and powerful customization options.",
+					"features": [
+						{
+							"icon": "ri-eye-line",
+							"text": "Live preview with instant updates as you type"
+						},
+						{
+							"icon": "ri-arrow-go-back-line",
+							"text": "Full undo/redo with keyboard shortcuts (Ctrl+Z / Ctrl+Shift+Z)"
+						},
+						{
+							"icon": "ri-drag-move-line",
+							"text": "Drag-and-drop project reordering with auto-scroll"
+						},
+						{
+							"icon": "ri-palette-line",
+							"text": "10 pre-made color palettes + custom theme editor"
+						},
+						{
+							"icon": "ri-device-line",
+							"text": "Mobile/tablet/desktop preview toggle"
+						},
+						{
+							"icon": "ri-file-download-line",
+							"text": "One-click export to HTML + README generation"
+						},
+						{
+							"icon": "ri-save-line",
+							"text": "Auto-save drafts to localStorage every 3 seconds"
+						},
+						{
+							"icon": "ri-folder-open-line",
+							"text": "Import/export projects as JSON for portability"
+						}
+					]
+				},
+				{
+					"number": "6",
+					"title": "User Experience Polish",
+					"description": "I obsessed over the small details. Character counters alert you when bios become excessively lengthy. In order to keep lengthy lists manageable, projects collapse. Toast alerts provide action confirmation without being intrusive. Before exporting, the validation modal finds errors such as incomplete projects, missing required fields, and accessibility problems. I discovered that users frequently produce projects that are similar, so I added a duplicate button. Every feature came from thinking: \"What would make my life easier?\""
+				}
+			],
+			"challenges": [
+				{
+					"title": "Undo/Redo State Management",
+					"problem": "Initial undo implementation didn't work on the first click due to reference issues and stale closures in React state.",
+					"solution": "Implemented deep cloning with <code>JSON.parse(JSON.stringify())</code> and wrapped handlers in <code>useCallback</code> to prevent stale closures. This ensured each history entry was a true snapshot of state."
+				},
+				{
+					"title": "Real-time Input Handling",
+					"problem": "Comma-separated inputs (skills, tech stack) processed on every keystroke, making it impossible to type commas or see them in the field.",
+					"solution": "Separated display state from data state using controlled inputs that only process on blur. This gave users a natural typing experience while maintaining clean data."
+				},
+				{
+					"title": "Template Preview Rendering",
+					"problem": "Initial iframe-based previews in the template gallery wouldn't render due to sandbox restrictions and CSP issues.",
+					"solution": "Switched to pure CSS mockups that visually represent each template style. This improved performance and eliminated security warnings while maintaining the preview functionality."
+				},
+				{
+					"title": "Drag-and-Drop UX",
+					"problem": "When dragging projects near the top or bottom of the container, users had to manually scroll to reach drop zones.",
+					"solution": "Added auto-scroll detection that triggers when dragging within 100px of container edges, creating a smooth, intuitive reordering experience."
+				}
+			],
+			"results": [
+				{
+					"icon": "bi-speedometer2",
+					"color": "#F97316",
+					"title": "Fast Workflow",
+					"description": "Users can go from blank canvas to exported portfolio in under 10 minutes."
+				},
+				{
+					"icon": "bi-phone",
+					"color": "#3B82F6",
+					"title": "Fully Responsive",
+					"description": "Builder interface adapts to mobile devices with dedicated mobile menu and optimized controls."
+				},
+				{
+					"icon": "bi-file-earmark-code",
+					"color": "#22C55E",
+					"title": "Clean Code Output",
+					"description": "Exports semantic HTML with modern CSS with no bloat, no dependencies, just clean code."
+				},
+				{
+					"icon": "bi-shield-check",
+					"color": "#6366F1",
+					"title": "Built-in Validation",
+					"description": "Pre-export checklist catches errors and provides accessibility recommendations."
+				},
+				{
+					"icon": "bi-palette",
+					"color": "#E87979",
+					"title": "Design Flexibility",
+					"description": "10 curated color palettes plus custom color pickers give users creative control."
+				},
+				{
+					"icon": "bi-arrow-counterclockwise",
+					"color": "#A3A3A3",
+					"title": "Forgiving UX",
+					"description": "Undo/redo with keyboard shortcuts means mistakes are never permanent."
+				}
+			],
+			"lessons": [
+				{
+					"title": "State Immutability",
+					"description": "Learned the importance of state immutability when implementing features like undo/redo—shallow copies aren't enough for complex state trees."
+				},
+				{
+					"title": "Early User Testing",
+					"description": "Discovered that user testing early prevents architectural mistakes. The comma-separated input issue would have been caught immediately with real users."
+				},
+				{
+					"title": "User Experience Design",
+					"description": "Improved skills in user experience design through features like character counters, collapsible sections, and real-time validation."
+				},
+				{
+					"title": "React Hooks Patterns",
+					"description": "Strengthened my understanding of React hooks patterns, particularly useCallback, useEffect dependencies, and custom state management."
+				},
+				{
+					"title": "Developer Ergonomics",
+					"description": "Gained appreciation for developer ergonomics like keyboard shortcuts, auto-save, and instant feedback make the tool feel professional and polished."
+				}
+			],
+			"gallery": [
+				{
+					"image": "/assets/img/projects/creavyn/template.png",
+					"title": "Choose Your Template",
+					"description": "Start with one of its professionally designed templates - Minimal or Bold."
+				},
+				{
+					"image": "/assets/img/projects/creavyn/build.png",
+					"title": "Build in Real-Time",
+					"description": "Edit your portfolio on the left, see changes instantly on the right. Live preview updates as you type."
+				},
+				{
+					"image": "/assets/img/projects/creavyn/theme.png",
+					"title": "Customize Your Colors",
+					"description": "Choose from 10 pre-made color palettes or create your own custom theme."
+				},
+				{
+					"image": "/assets/img/projects/creavyn/result.png",
+					"title": "Professional Results",
+					"description": "Export a polished, production-ready portfolio. Here's what your final site looks like."
+				}
+			]
+		},
+
+		{
+			"id": 4,
+			"slug": "taskirra",
+			"title": "Taskirra Task Manager",
+			"shortDescription": "A modern, feature-rich task management application with drag-and-drop, recurring tasks, and smart filtering",
+			"overview": "Taskirra is a modern task management application built for productivity enthusiasts who need more than just a simple to-do list. Designed with powerful features like drag-and-drop reordering, recurring tasks, subtask management, and smart filtering, it provides a comprehensive solution for organizing work and personal projects. The application combines advanced functionality with an intuitive interface, ensuring users can manage their tasks efficiently without feeling overwhelmed.",
+			"category": "react",
+			"featured": true,
+			"heroImage": "/assets/img/projects/taskirra/dashboard.png",
+			"techStack": [
+				{
+					"name": "React",
+					"icon": "ri-reactjs-line",
+					"color": "#61DAFB",
+					"bg": "rgba(97, 218, 251, 0.2)",
+					"description": "Leveraged hooks (useState, useEffect, custom hooks) for efficient state management and component lifecycle control"
+				},
+				{
+					"name": "Vite",
+					"icon": "bi-lightning-charge",
+					"color": "#646CFF",
+					"bg": "rgba(100, 108, 255, 0.2)",
+					"description": "Ultra-fast build tool providing instant hot module replacement and optimized production builds"
+				},
+				{
+					"name": "Bootstrap 5",
+					"icon": "bi-bootstrap",
+					"color": "#7952B3",
+					"bg": "rgba(121, 82, 179, 0.2)",
+					"description": "Responsive grid system and component library customized with CSS variables for consistent theming"
+				},
+				{
+					"name": "dnd-kit",
+					"icon": "bi-grip-vertical",
+					"color": "#3B82F6",
+					"bg": "rgba(59, 130, 246, 0.2)",
+					"description": "Modern drag-and-drop library providing smooth, accessible interactions with keyboard support"
+				},
+				{
+					"name": "LocalStorage API",
+					"icon": "bi-database",
+					"color": "#10b981",
+					"bg": "rgba(16, 185, 129, 0.2)",
+					"description": "Client-side data persistence ensuring privacy and instant load times without backend dependencies"
+				},
+				{
+					"name": "CSS Variables",
+					"icon": "bi-palette",
+					"color": "#F59E0B",
+					"bg": "rgba(245, 158, 11, 0.2)",
+					"description": "Custom CSS properties enabling dynamic theme switching and consistent color management"
+				}
+			],
+			"liveUrl": "https://taskirra.vercel.app",
+			"repoUrl": "https://github.com/jericho066/taskirra",
+			"client": "Personal Project",
+			"role": "Full-Stack Developer & UI/UX Designer",
+			"timeline": "4 Weeks (2024)",
+			"metaRole": "Full-Stack Developer & UI/UX Designer",
+			"metaTimeline": "4 Weeks (2024)",
+			"metaTech": "React, Vite, Bootstrap 5, dnd-kit",
+			"problem": "Most task managers are either too simple (lacking features) or too complex (overwhelming users). Finding the right balance between power and simplicity is challenging.",
+			"solution": "Created a feature-complete task manager with advanced functionality (drag-and-drop, recurring tasks, subtasks) wrapped in an intuitive, clean interface that doesn't overwhelm users.",
+			"impact": "Users can manage complex projects with 15+ features including subtasks, recurring tasks, bulk actions, and undo support while maintaining a simple, fast experience across all devices.",
+			"problemGoal": [
+				"Many task management apps either lack essential features or overwhelm users with complexity. Simple to-do lists don't scale for serious work, while enterprise tools have steep learning curves and subscription fees.",
+				"I wanted to create a solution that provides <strong>advanced functionality</strong> without sacrificing <strong>simplicity and speed</strong>. The goal was to build a <strong>feature-complete</strong> task manager that feels intuitive, while giving me hands-on experience with complex state management, drag-and-drop interactions, and building accessible web applications."
+			],
+			"process": [
+				{
+					"number": "1",
+					"title": "Planning & Research",
+					"description": "I analyzed popular task managers like Todoist, Asana, and Microsoft To Do to identify essential features users expect. I mapped out core functionality including CRUD operations, filtering, search, and data persistence. The architecture was planned around React hooks for state management and localStorage for data persistence, keeping the app completely client-side for privacy and speed."
+				},
+				{
+					"number": "2",
+					"title": "Design Philosophy",
+					"description": "The visual design prioritizes clarity and efficiency. I used Bootstrap 5 as a foundation with custom CSS variables for theming. The color palette features a vibrant blue (#3b82f6) as the primary color, complemented by semantic colors for priorities and status indicators. Every UI element was designed to provide immediate visual feedback, from hover states to completion animations, making the app feel responsive and alive."
+				},
+				{
+					"number": "3",
+					"title": "Core Features Implementation",
+					"description": "Built comprehensive task management features with real-time updates and persistent storage for a seamless user experience.",
+					"features": [
+						{
+							"icon": "bi-check-circle",
+							"text": "Full CRUD operations with form validation and error handling"
+						},
+						{
+							"icon": "bi-list-nested",
+							"text": "Subtask management for breaking down complex tasks"
+						},
+						{
+							"icon": "bi-arrow-repeat",
+							"text": "Recurring tasks with daily, weekly, and monthly options"
+						},
+						{
+							"icon": "bi-funnel",
+							"text": "Smart filtering by date, priority, tags, and status"
+						},
+						{
+							"icon": "bi-grip-vertical",
+							"text": "Drag-and-drop reordering using @dnd-kit library"
+						},
+						{
+							"icon": "bi-bar-chart",
+							"text": "Real-time dashboard with progress tracking and analytics"
+						},
+						{
+							"icon": "bi-moon-stars",
+							"text": "Seamless dark mode with persistent theme preference"
+						},
+						{
+							"icon": "bi-arrow-counterclockwise",
+							"text": "Undo functionality for deletions and completions"
+						}
+					]
+				},
+				{
+					"number": "4",
+					"title": "Advanced Features",
+					"description": "Implemented power-user features including keyboard shortcuts (Ctrl+N for new task, / for search), bulk actions for managing multiple tasks at once, export/import functionality for data portability, and toast notifications with undo support for a forgiving user experience."
+				},
+				{
+					"number": "5",
+					"title": "Accessibility & Polish",
+					"description": "Ensured WCAG 2.1 AA compliance with complete keyboard navigation, screen reader support, focus management, and ARIA labels. Added skip links, proper heading hierarchy, and tested with actual screen readers. Implemented smooth animations with respect for prefers-reduced-motion, and optimized for performance with sub-second load times."
+				}
+			],
+			"challenges": [
+				{
+					"title": "Complex State Management",
+					"problem": "Managing multiple interconnected states (tasks, filters, selections, modals) became increasingly complex as features were added. Deep nesting and prop drilling made the code hard to maintain.",
+					"solution": "Created custom hooks (useLocalStorage, useKeyboardShortcuts) to encapsulate logic and implemented a clear state architecture with proper data flow. Used React's Context API sparingly and lifted state only when necessary, keeping most state local to components."
+				},
+				{
+					"title": "Drag-and-Drop Performance",
+					"problem": "Initial drag-and-drop implementation caused noticeable lag with large task lists (100+ items) and completely broke when filtering was active, as the library lost track of item positions.",
+					"solution": "Optimized with proper memoization using React.memo and useCallback. Switched from position-based CSS to transform-based animations for 60fps performance. Fixed filtering issues by ensuring unique IDs and proper SortableContext configuration."
+				},
+				{
+					"title": "Recurring Task Logic",
+					"problem": "Generating next occurrences of recurring tasks created infinite loops, duplicate entries, and memory leaks. The useEffect that generated tasks kept triggering itself.",
+					"solution": "Built a dedicated utility module with proper date calculations and duplicate detection. Optimized the useEffect dependency array to only run when completed tasks count changed, not on every state update. Added safeguards to prevent infinite generation loops."
+				},
+				{
+					"title": "Accessibility Compliance",
+					"problem": "Ensuring keyboard navigation, screen reader support, and WCAG compliance across all features was time-intensive. Modal focus trapping, drag-and-drop keyboard support, and dynamic content announcements required careful implementation.",
+					"solution": "Implemented comprehensive ARIA labels, focus management with focus traps for modals, skip links for keyboard users, and keyboard shortcuts with visual indicators. Tested extensively with NVDA and VoiceOver screen readers to ensure full accessibility."
+				}
+			],
+			"results": [
+				{
+					"icon": "bi-speedometer2",
+					"color": "#3B82F6",
+					"title": "Excellent Performance",
+					"description": "Lighthouse score of 95+ with sub-second load times and smooth 60fps animations"
+				},
+				{
+					"icon": "bi-universal-access",
+					"color": "#10B981",
+					"title": "Fully Accessible",
+					"description": "WCAG 2.1 AA compliant with complete keyboard navigation and screen reader support"
+				},
+				{
+					"icon": "bi-phone",
+					"color": "#F59E0B",
+					"title": "Mobile-First Design",
+					"description": "Responsive across all devices with touch-optimized interactions and adaptive layouts"
+				},
+				{
+					"icon": "bi-shield-check",
+					"color": "#EF4444",
+					"title": "Privacy-Focused",
+					"description": "100% client-side with no data tracking, cookies, or external requests beyond deployment"
+				},
+				{
+					"icon": "bi-list-check",
+					"color": "#8B5CF6",
+					"title": "Feature-Complete",
+					"description": "15+ major features including subtasks, recurring tasks, bulk actions, export/import, and undo"
+				},
+				{
+					"icon": "bi-emoji-smile",
+					"color": "#06B6D4",
+					"title": "Intuitive UX",
+					"description": "Clean interface with contextual feedback, keyboard shortcuts, and progressive disclosure"
+				}
+			],
+			"lessons": [
+				{
+					"title": "Advanced React Patterns",
+					"description": "Mastered custom hooks, compound components, and optimized re-rendering strategies. Learned when to use local state vs. lifted state vs. custom hooks for better component architecture and reusability."
+				},
+				{
+					"title": "Accessibility Standards",
+					"description": "Gained deep understanding of WCAG guidelines and learned to build inclusive experiences from the ground up. Discovered that accessibility isn't an afterthought—it fundamentally shapes better design decisions for all users."
+				},
+				{
+					"title": "Complex State Management",
+					"description": "Developed expertise in managing complex application state across multiple components. Understanding React's reconciliation algorithm helped optimize performance and prevent unnecessary re-renders."
+				},
+				{
+					"title": "Performance Optimization",
+					"description": "Enhanced skills in profiling and fixing rendering bottlenecks. Learned that perceived performance (loading states, optimistic updates, smooth animations) is as important as actual performance metrics."
+				},
+				{
+					"title": "UX Design Thinking",
+					"description": "Improved ability to balance feature richness with interface simplicity. Learned that progressive disclosure and contextual help create more delightful experiences than overwhelming users with all features at once."
+				},
+				{
+					"title": "Documentation Importance",
+					"description": "Realized that proper documentation and creating maintainable, scalable code architecture saves countless hours. Writing a comprehensive README and commenting complex logic made the project portfolio-ready."
+				}
+			],
+			"gallery": [
+				{
+					"image": "/assets/img/projects/taskirra/dashboard.png",
+					"title": "Dashboard & Analytics",
+					"description": "Track your progress with visual statistics and real-time task updates."
+				},
+				{
+					"image": "/assets/img/projects/taskirra/task-form.png",
+					"title": "Powerful Task Management",
+					"description": "Create tasks with subtasks, priorities, tags, and recurring schedules."
+				},
+				{
+					"image": "/assets/img/projects/taskirra/dark-mode.png",
+					"title": "Beautiful Dark Mode",
+					"description": "Switch between light and dark themes for comfortable viewing anytime."
+				}
+			]
+		}
+		
+
+
+	]
+}
