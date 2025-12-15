@@ -1,15 +1,6 @@
 let allProjects = [];
 let currentFilter = 'all';
 
-// ============================================================================
-// SHUFFLE ARRAY FUNCTION (Fisher-Yates Algorithm)
-// ============================================================================
-
-/**
- * Randomly shuffles an array using Fisher-Yates algorithm
- * @param {Array} array - The array to shuffle
- * @returns {Array} - Shuffled array
- */
 function shuffleArray(array) {
 	const shuffled = [...array]; // Create a copy to avoid mutating original
 	
@@ -20,10 +11,6 @@ function shuffleArray(array) {
 	
 	return shuffled;
 }
-
-// ============================================================================
-// LOAD PROJECTS FROM JSON
-// ============================================================================
 
 async function loadProjects() {
 	try {
@@ -57,15 +44,16 @@ async function loadProjects() {
 		console.error('Error loading projects:', error);
 		displayError();
 	}
+
 }
 
-// ============================================================================
-// HELPER FUNCTIONS
-// ============================================================================
 
-/**
- * Get tech stack names from array (handles both object and string arrays)
- */
+
+//? ===========================
+//? ==== HELPER FUNCTIONS =====
+//? ===========================
+
+/* Get tech stack names from array */
 function getTechStackNames(techStack) {
 	if (!techStack || !Array.isArray(techStack)) return [];
 	
@@ -77,10 +65,7 @@ function getTechStackNames(techStack) {
 	return techStack;
 }
 
-// ============================================================================
-// RENDER PROJECTS TO DOM
-// ============================================================================
-
+// ==== RENDER PROJECTS TO DOM ====
 function renderProjects(projects) {
 	const container = document.getElementById('projectsContainer');
 	
@@ -164,9 +149,6 @@ function renderProjects(projects) {
 	}
 }
 
-// ============================================================================
-// FILTER PROJECTS
-// ============================================================================
 
 function filterProjects(filter) {
 	currentFilter = filter;
@@ -191,9 +173,6 @@ function filterProjects(filter) {
 	}
 }
 
-// ============================================================================
-// INITIALIZE FILTER BUTTONS
-// ============================================================================
 
 function initializeFilters() {
 	const filterButtons = document.querySelectorAll('.filter-btn');
@@ -231,9 +210,6 @@ function initializeFilters() {
 	}
 }
 
-// ============================================================================
-// DISPLAY ERROR MESSAGE
-// ============================================================================
 
 function displayError() {
 	const container = document.getElementById('projectsContainer');
@@ -263,9 +239,6 @@ function displayError() {
 }
 
 
-/**
- * Add this function if you want a "Shuffle Projects" button
- */
 function addShuffleButton() {
 	const filtersContainer = document.getElementById('projectFilters');
 	
@@ -300,9 +273,6 @@ function addShuffleButton() {
 	}
 }
 
-// ============================================================================
-// ENHANCED STYLING FOR FILTER BUTTONS
-// ============================================================================
 
 const style = document.createElement('style');
 style.textContent = `
@@ -358,11 +328,12 @@ style.textContent = `
 		color: white;
 	}
 `;
-document.head.appendChild(style);
 
-// ============================================================================
-// INITIALIZE ON PAGE LOAD
-// ============================================================================
+
+
+//? =================================
+//? ==== INITIALIZE ON PAGE LOAD ====
+//? =================================
 
 document.addEventListener('DOMContentLoaded', () => {
 	// Only load projects if we're on the projects page
@@ -376,9 +347,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 });
 
-// ============================================================================
-// PERFORMANCE: Lazy loading for project images
-// ============================================================================
 
 // Observe images for lazy loading
 if ('IntersectionObserver' in window) {
@@ -404,3 +372,4 @@ if ('IntersectionObserver' in window) {
 		}, 100);
 	});
 }
+

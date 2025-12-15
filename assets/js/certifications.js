@@ -3,7 +3,6 @@
 // Certificate images mapping
 const certificateImages = {
 	'fcc-rwdv8': '/assets/img/certifications/fcc-responsive-web-design.png'
-	// Add more certificates here as you complete them
 	// 'fcc-js': '/assets/img/certifications/fcc-javascript.png',
 	// 'fcc-fed': '/assets/img/certifications/fcc-frontend-libraries.png',
 };

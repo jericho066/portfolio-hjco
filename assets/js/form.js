@@ -88,10 +88,6 @@ async function handleFormSubmit(e) {
     }
 }
 
-// ============================================================================
-// FORM VALIDATION
-// ============================================================================
-
 function validateForm(form) {
     let isValid = true;
     
@@ -159,9 +155,10 @@ function clearFieldError(field) {
     }
 }
 
-// ============================================================================
-// FEEDBACK MESSAGES
-// ============================================================================
+
+//? ===========================
+//? ==== FEEDBACK MESSAGES ====
+//? ===========================
 
 function showMessage(type, message) {
     // Remove any existing messages
@@ -189,10 +186,6 @@ function showMessage(type, message) {
         }, 300);
     }, 5000);
 }
-
-// ============================================================================
-// REAL-TIME VALIDATION
-// ============================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');
@@ -225,17 +218,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ============================================================================
-// UTILITY FUNCTIONS
-// ============================================================================
-
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
-
-// ============================================================================
-// HONEYPOT SETUP
-// ============================================================================
 
 // Ensure honeypot field exists and is properly hidden
 document.addEventListener('DOMContentLoaded', () => {

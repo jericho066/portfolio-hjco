@@ -129,6 +129,42 @@
 	padding: 0;
 }
 
+*:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 6px rgba(108, 92, 231, 0.15);
+    animation: focus-pulse 2s ease-in-out infinite;
+}
+
+@keyframes focus-pulse {
+    0%, 100% { 
+        box-shadow: 0 0 0 6px rgba(108, 92, 231, 0.15); 
+    }
+    50% { 
+        box-shadow: 0 0 0 10px rgba(108, 92, 231, 0.1); 
+    }
+}
+
+/* Better focus for dark mode */
+[data-theme="dark"] *:focus-visible {
+    outline-color: var(--color-primary-light);
+    box-shadow: 0 0 0 6px rgba(162, 155, 254, 0.2);
+}
+
+[data-theme="dark"] *:focus-visible {
+    animation: focus-pulse-dark 2s ease-in-out infinite;
+}
+
+@keyframes focus-pulse-dark {
+    0%, 100% { 
+        box-shadow: 0 0 0 6px rgba(162, 155, 254, 0.2); 
+    }
+    50% { 
+        box-shadow: 0 0 0 10px rgba(162, 155, 254, 0.1); 
+    }
+}
+
 html {
 	font-size: 16px;
 	scroll-behavior: smooth;
