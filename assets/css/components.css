@@ -700,10 +700,7 @@ a:focus-visible,
 
 /* Gradient text effect for animated words */
 .hero-text-item {
-	background: linear-gradient(135deg, 
-		var(--color-primary) 0%, 
-		var(--color-primary-dark) 100%
-	);
+	background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -711,10 +708,7 @@ a:focus-visible,
 
 /* Dark mode adjustments */
 [data-theme="dark"] .hero-text-item {
-	background: linear-gradient(135deg, 
-		var(--color-primary-light) 0%, 
-		var(--color-primary) 100%
-	);
+	background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -733,7 +727,7 @@ a:focus-visible,
 	}
 	
 	.hero-title-animated {
-		min-width: 280px;
+		min-width: 380px;
 		margin-left: 0;
 	}
 	
@@ -749,7 +743,7 @@ a:focus-visible,
 	}
 
 	.hero-title-animated {
-		min-width: 240px;
+		min-width: 280px;
 		font-size: 0.85em;
 	}
 }
@@ -1103,7 +1097,7 @@ a:focus-visible,
 	z-index: 1;
 }
 
-/* Frosted glass card - Center (optional accent) */
+/* Frosted glass card */
 .glass-card-3 {
 	position: absolute;
 	width: 200px;

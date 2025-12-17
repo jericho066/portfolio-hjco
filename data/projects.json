@@ -4,6 +4,7 @@
 			"id": 1,
 			"slug": "dishlyst",
 			"title": "Dishlyst Recipe Finder",
+			"hasCaseStudy": true,
 			"shortDescription": "A modern, React-based recipe search application that makes finding and saving meal ideas effortless",
 			"overview": "Dishlyst is a streamlined recipe finder designed for the modern web. Built with simplicity and user experience at its core, it helps users discover meal ideas from ingredients they already have. The application combines real-time search, favorite recipes management, and shopping list functionality into one responsive, intuitive interface.",
 			"category": "react",
@@ -187,6 +188,7 @@
 			"id": 2,
 			"slug": "monivra",
 			"title": "Monivra Expense Tracker",
+			"hasCaseStudy": true,
 			"shortDescription": "A modern, intuitive expense tracking application built with React that helps users track income and expenses",
 			"overview": "Monivra is a modern expense tracking web application designed to help individuals take control of their personal finances. It allows users keep track of their income and expenses, see how they spend their money through charts, and handle transactions quickly, all while keeping the information on their own device for privacy.",
 			"category": "react",
@@ -366,6 +368,7 @@
 			"id": 3,
 			"slug": "creavyn",
 			"title": "Creavyn Portfolio Builder",
+			"hasCaseStudy": true,
 			"shortDescription": "A visual portfolio builder that helps developers create professional portfolios without writing code",
 			"overview": "Creavyn is a no-code portfolio builder designed specifically for developers who want to showcase their work without spending hours on design and development. It bridges the gap between generic website builders and custom-coded portfolios by offering a developer-focused, intuitive interface with powerful customization options. The goal was to create a tool that respects the creative process while dramatically reducing the time from concept to deployment.",
 			"category": "react",
@@ -606,6 +609,7 @@
 			"id": 4,
 			"slug": "taskirra",
 			"title": "Taskirra Task Manager",
+			"hasCaseStudy": true,
 			"shortDescription": "A modern, feature-rich task management application with drag-and-drop, recurring tasks, and smart filtering",
 			"overview": "Taskirra is a modern task management application built for productivity enthusiasts who need more than just a simple to-do list. Designed with powerful features like drag-and-drop reordering, recurring tasks, subtask management, and smart filtering, it provides a comprehensive solution for organizing work and personal projects. The application combines advanced functionality with an intuitive interface, ensuring users can manage their tasks efficiently without feeling overwhelmed.",
 			"category": "react",
@@ -834,6 +838,34 @@
 					"description": "Switch between light and dark themes for comfortable viewing anytime."
 				}
 			]
+		},
+
+		{
+			"id": 5,
+			"slug": "portfolio",
+			"title": "Personal Portfolio Website",
+			"shortDescription": "A modern, responsive portfolio showcasing my projects and skills with clean design and smooth animations",
+			"category": "vanilla",
+			"featured": false,
+			"hasCaseStudy": false,
+			"heroImage": "/assets/img/projects/portfolio/preview.png",
+			"liveUrl": "https://portfolio-hjco.vercel.app",
+			"repoUrl": "https://github.com/jericho066/portfolio-hjco",
+			"techStack": ["JavaScript", "HTML", "CSS"]
+		},
+
+		{
+			"id": 6,
+			"slug": "flappy bird",
+			"title": "Flappy Bird Clone",
+			"shortDescription": "A pixel-perfect Flappy Bird recreation using vanilla JavaScript and HTML5 Canvas with smooth animations, collision detection, and responsive design",
+			"category": "vanilla",
+			"featured": false,
+			"hasCaseStudy": false,
+			"heroImage": "/assets/img/projects/taskirra/dashboard.png",
+			"liveUrl": "https://jericho066.github.io/flappy-bird-js/",
+			"repoUrl": "https://github.com/jericho066/flappy-bird-js",
+			"techStack": ["JavaScript", "HTML5 Canvas", "CSS"]
 		}
 		
 

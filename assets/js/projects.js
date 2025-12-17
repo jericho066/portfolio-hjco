@@ -127,11 +127,10 @@ function renderProjects(projects) {
 							</a>
 						` : ''}
 					</div>
-					<a href="/project.html?id=${project.slug}" 
-					   class="project-card-study"
-					   aria-label="Read ${project.title} case study">
-						Case Study
-					</a>
+
+					${project.hasCaseStudy !== false ? `
+						<a href="/project.html?id=${project.slug}" class="project-card-study">Case Study</a>
+					` : ''}
 				</div>
 			</div>
 		</div>
