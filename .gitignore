@@ -10,7 +10,7 @@ Thumbs.db
 *.tmp
 *.log
 
-# Build (if you add build tools later)
+# Build
 node_modules/
 dist/
 .cache/" > .gitignore

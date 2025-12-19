@@ -9,6 +9,71 @@
 
 	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#0f0f23" media="(prefers-color-scheme: dark)">
+
+	<!-- ADD ItemList schema for projects -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "ItemList",
+		"name": "Jerico Oliver's Portfolio Projects",
+		"description": "A collection of web development projects showcasing React, JavaScript, and modern web technologies.",
+		"numberOfItems": 4,
+		"itemListElement": [
+			{
+				"@type": "CreativeWork",
+				"position": 1,
+				"name": "Dishlyst Recipe Finder",
+				"description": "React-based recipe search application powered by TheMealDB API",
+				"url": "https://portfolio-hjco.vercel.app/project.html?id=dishlyst",
+				"image": "https://portfolio-hjco.vercel.app/assets/img/projects/dishlyst/preview.png",
+				"author": {
+					"@type": "Person",
+					"name": "Jerico Oliver"
+				},
+				"programmingLanguage": ["JavaScript", "React", "CSS"]
+			},
+			{
+				"@type": "CreativeWork",
+				"position": 2,
+				"name": "Monivra Expense Tracker",
+				"description": "Personal finance web app built with React and Recharts for tracking income and expenses",
+				"url": "https://portfolio-hjco.vercel.app/project.html?id=monivra",
+				"image": "https://portfolio-hjco.vercel.app/assets/img/projects/monivra/preview.png",
+				"author": {
+					"@type": "Person",
+					"name": "Jerico Oliver"
+				},
+				"programmingLanguage": ["JavaScript", "React", "CSS"]
+			},
+			{
+				"@type": "CreativeWork",
+				"position": 3,
+				"name": "Creavyn Portfolio Builder",
+				"description": "No-code portfolio builder with drag-and-drop, live preview, and export functionality",
+				"url": "https://portfolio-hjco.vercel.app/project.html?id=creavyn",
+				"image": "https://portfolio-hjco.vercel.app/assets/img/projects/creavyn/preview.png",
+				"author": {
+					"@type": "Person",
+					"name": "Jerico Oliver"
+				},
+				"programmingLanguage": ["JavaScript", "React", "CSS"]
+			},
+			{
+				"@type": "CreativeWork",
+				"position": 4,
+				"name": "Taskirra Task Manager",
+				"description": "Feature-rich task management application with drag-and-drop, recurring tasks, and smart filtering",
+				"url": "https://portfolio-hjco.vercel.app/project.html?id=taskirra",
+				"image": "https://portfolio-hjco.vercel.app/assets/img/projects/taskirra/preview.png",
+				"author": {
+					"@type": "Person",
+					"name": "Jerico Oliver"
+				},
+				"programmingLanguage": ["JavaScript", "React", "Bootstrap", "CSS"]
+			}
+		]
+	}
+	</script>
 	
 	<title>Projects - Jerico Oliver</title>
 	
@@ -24,9 +89,19 @@
 	<link rel="stylesheet" href="/assets/css/components.css">
 	<link rel="stylesheet" href="/assets/css/utils.css">
 </head>
-<body>
 
-	<a href="#main-content" class="skip-to-content">Skip to content</a>
+<body>
+	
+	<div 
+		id="announcer" 
+		class="sr-only" 
+		role="status" 
+		aria-live="polite" 
+		aria-atomic="true">
+	</div>
+
+	<a href="#main-content" class="skip-to-content">Skip to main content</a>
+	<a href="#navigation" class="skip-to-content">Skip to navigation</a>
 	
 	<div id="header"></div>
 	
@@ -57,10 +132,38 @@
 		<section class="section-sm">
 			<div class="container">
 				<div class="flex gap-md justify-center flex-wrap" id="projectFilters" data-animate>
-					<button class="btn btn-sm filter-btn active" data-filter="all">All Projects</button>
-					<button class="btn btn-sm filter-btn" data-filter="react">React</button>
-					<button class="btn btn-sm filter-btn" data-filter="vanilla">Vanilla JS</button>
-					<button class="btn btn-sm filter-btn" data-filter="featured">Featured</button>
+					<button 
+						class="btn btn-sm filter-btn active" 
+						data-filter="all" 
+						aria-pressed="true"
+					>
+						All Projects
+					</button>
+
+					<button 
+						class="btn btn-sm filter-btn" 
+						data-filter="react" 
+						aria-pressed="false"
+					>
+						React
+					</button>
+
+					<button 
+						class="btn btn-sm filter-btn" 
+						data-filter="vanilla" 
+						aria-pressed="false"
+					>
+						Vanilla JS
+					</button>
+
+
+					<button 
+						class="btn btn-sm filter-btn" 
+						data-filter="featured" 
+						aria-pressed="false"
+					>
+						Featured
+					</button>
 					
 				</div>
 			</div>

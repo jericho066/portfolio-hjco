@@ -1,11 +1,3 @@
-// ============================================================================
-// STEP 1: CODE QUALITY IMPROVEMENTS (95 → 100)
-// ============================================================================
-// This replaces your current main.js with improved patterns
-
-// ============================================================================
-// 1. ENVIRONMENT-AWARE LOGGER (Replaces console.log)
-// ============================================================================
 
 const logger = {
 	isDevelopment: window.location.hostname === 'localhost' || 
@@ -29,9 +21,6 @@ const logger = {
 	}
 };
 
-// ============================================================================
-// 2. ERROR BOUNDARY - Global Error Handler
-// ============================================================================
 
 /**
  * Global error handler for uncaught errors
@@ -50,13 +39,59 @@ window.addEventListener('error', (event) => {
 	showUserFriendlyError('Something went wrong. Please refresh the page.');
 });
 
-/**
- * Handle unhandled promise rejections
- */
-window.addEventListener('unhandledrejection', (event) => {
-	logger.error('Unhandled promise rejection:', event.reason);
-	showUserFriendlyError('A network error occurred. Please check your connection.');
-});
+
+
+//? =================================
+//? ==== SCREEN READER ANNOUNCER ====
+//? =================================
+
+const announcer = {
+    element: null,
+    timeout: null,
+    
+    /**
+     * Initialize the announcer
+     */
+    init() {
+        this.element = document.getElementById('announcer');
+        if (!this.element) {
+            logger.warn('Announcer element not found');
+        }
+    },
+    
+    /**
+     * Announce a message to screen readers
+     * @param {string} message - Message to announce
+     * @param {string} priority - 'polite' or 'assertive'
+     */
+    announce(message, priority = 'polite') {
+        if (!this.element) return;
+        
+        // Clear previous timeout
+        if (this.timeout) {
+            clearTimeout(this.timeout);
+        }
+        
+        // Set priority
+        this.element.setAttribute('aria-live', priority);
+        
+        // Clear and set message
+        this.element.textContent = '';
+        
+        setTimeout(() => {
+            this.element.textContent = message;
+        }, 100);
+        
+        // Clear after announcement
+        this.timeout = setTimeout(() => {
+            this.element.textContent = '';
+        }, 1000);
+    }
+};
+
+// Make globally available
+window.announcer = announcer;
+
 
 /**
  * Display user-friendly error message
@@ -85,14 +120,10 @@ function showUserFriendlyError(message) {
 	}, 5000);
 }
 
-// ============================================================================
-// 3. MODULAR SLIDER CONTROLLER (Replaces global functions)
-// ============================================================================
+//? ===================================
+//? ==== MODULAR SLIDER CONTROLLER ====
+//? ===================================
 
-/**
- * Image slider controller with encapsulated state
- * @namespace SliderController
- */
 const SliderController = {
 	currentSlide: 0,
 	slides: [],
@@ -141,6 +172,7 @@ const SliderController = {
 			} else if (diff === 1 || (this.currentSlide === this.totalSlides - 1 && index === 0)) {
 				slide.classList.add('next');
 			}
+
 		});
 		
 		// Update dots
@@ -251,16 +283,12 @@ window.previousSlide = () => SliderController.previous();
 window.goToSlide = (index) => SliderController.goTo(index);
 window.initSlider = () => SliderController.init();
 
-// ============================================================================
-// 4. IMPROVED ASYNC LOADING WITH ERROR HANDLING
-// ============================================================================
 
-/**
- * Load header and footer partials with improved error handling
- * @async
- * @returns {Promise<void>}
- * @throws {Error} When partial loading fails
- */
+
+//? ====================================================
+//? ==== IMPROVED ASYNC LOADING WITH ERROR HANDLING ====
+//? ====================================================
+
 async function loadPartials() {
 	try {
 		// Load both partials in parallel for better performance
@@ -281,6 +309,7 @@ async function loadPartials() {
 		const [headerHTML, footerHTML] = await Promise.all([
 			headerResponse.text(),
 			footerResponse.text()
+
 		]);
 		
 		// Insert into DOM
@@ -296,18 +325,16 @@ async function loadPartials() {
 		initHeaderScroll();
 		setupThemeToggle();
 		
+
 		logger.log('✓ Partials loaded successfully');
 		
 	} catch (error) {
 		logger.error('Error loading partials:', error);
 		showUserFriendlyError('Unable to load page components. Please refresh.');
-		throw error; // Re-throw for debugging
+		// throw error;
 	}
 }
 
-/**
- * Initialize mobile navigation with proper ARIA attributes
- */
 function initNavigation() {
 	const navToggle = document.getElementById('navToggle');
 	const navMenu = document.getElementById('navMenu');
@@ -524,13 +551,11 @@ function initSkillBars() {
 	skillCategories.forEach((category) => observer.observe(category));
 }
 
-// ============================================================================
-// 5. THEME MANAGEMENT
-// ============================================================================
 
-/**
- * Initialize theme based on user preference or system setting
- */
+//? ==========================
+//? ==== THEME MANAGEMENT ====
+//? ==========================
+
 function initTheme() {
 	// Add no-transition class to prevent animation on page load
 	document.documentElement.classList.add('no-transition');
@@ -614,16 +639,12 @@ function listenToSystemThemeChanges() {
 	});
 }
 
-// ============================================================================
-// 6. STARRY NIGHT EFFECT (Dark Mode)
-// ============================================================================
 
-/**
- * Generate stars for dark mode background
- * @param {HTMLElement} container - Container element
- * @param {number} count - Number of stars to generate
- * @param {string} layerClass - CSS class for the layer
- */
+
+//? =============================
+//? ==== STARRY NIGHT EFFECT ====
+//? =============================
+
 function generateStars(container, count, layerClass) {
 	const layer = document.createElement('div');
 	layer.className = `stars-layer ${layerClass}`;
@@ -676,13 +697,12 @@ function initStarryNight() {
 // Expose globally
 window.initStarryNight = initStarryNight;
 
-// ============================================================================
-// 7. GLASS MORPHISM CARDS
-// ============================================================================
 
-/**
- * Add floating glass cards to case study hero sections
- */
+
+//? ==============================
+//? ==== GLASS MORPHISM CARDS ====
+//? ==============================
+
 function addGlassCards() {
 	const caseStudyHero = document.querySelector('.case-study-hero');
 	
@@ -708,20 +728,20 @@ function addGlassCards() {
 
 window.addGlassCards = addGlassCards;
 
-// ============================================================================
-// 8. INITIALIZATION - DOMContentLoaded
-// ============================================================================
 
-/**
- * Initialize all components when DOM is ready
- */
+
+//? ========================
+//? ==== INITIALIZATION ====
+//? ========================
+
 document.addEventListener('DOMContentLoaded', () => {
 	logger.log('🚀 Portfolio initialization started...');
 	
+	announcer.init();
+
 	// Initialize theme first
 	initTheme();
 	
-	// Load partials
 	loadPartials();
 	
 	// Initialize animations and interactions
@@ -742,9 +762,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	logger.log('✅ Portfolio initialized successfully!');
 });
 
-// ============================================================================
-// 9. WINDOW RESIZE HANDLER
-// ============================================================================
+
+
+//? ===============================
+//? ==== WINDOW RESIZE HANDLER ====
+//? ===============================
 
 window.addEventListener('resize', debounce(() => {
 	// Close mobile menu on resize to desktop
@@ -762,7 +784,7 @@ window.addEventListener('resize', debounce(() => {
 }, 250));
 
 // ============================================================================
-// 10. PERFORMANCE MONITORING (Optional - Development Only)
+// ==== PERFORMANCE MONITORING (Optional - Development Only)
 // ============================================================================
 
 if (logger.isDevelopment && 'PerformanceObserver' in window) {

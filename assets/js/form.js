@@ -136,6 +136,7 @@ function isValidEmail(email) {
 
 function showFieldError(field, message) {
     field.classList.add('error');
+    field.setAttribute('aria-invalid', 'true'); 
     
     // Create or update error message
     let errorElement = field.parentElement.querySelector('.error-message');
@@ -145,13 +146,20 @@ function showFieldError(field, message) {
         field.parentElement.appendChild(errorElement);
     }
     errorElement.textContent = message;
+
+    // Announce error to screen readers
+    if (window.announcer) {
+        window.announcer.announce(`Error: ${message}`, 'assertive');
+    }
 }
 
 function clearFieldError(field) {
     field.classList.remove('error');
+    field.setAttribute('aria-invalid', 'false');
+
     const errorElement = field.parentElement.querySelector('.error-message');
     if (errorElement) {
-        errorElement.remove();
+         errorElement.textContent = '';
     }
 }
 

@@ -2893,6 +2893,41 @@ a:focus-visible,
 	resize: vertical;
 }
 
+/* ============================================ */
+/* FORM ACCESSIBILITY ENHANCEMENTS */
+/* ============================================ */
+
+.required-indicator {
+    color: var(--color-error);
+    font-weight: var(--font-weight-bold);
+}
+
+.error-message {
+    display: none;
+    color: var(--color-error);
+    font-size: var(--font-size-sm);
+    margin-top: var(--space-xs);
+}
+
+.error-message:not(:empty) {
+    display: block;
+}
+
+
+/* Error state */
+.form-input[aria-invalid="true"],
+.form-textarea[aria-invalid="true"] {
+    border-color: var(--color-error);
+    border-left-color: var(--color-error);
+}
+
+/* Success state */
+.form-input[aria-invalid="false"]:valid:not(:placeholder-shown),
+.form-textarea[aria-invalid="false"]:valid:not(:placeholder-shown) {
+    border-left-color: var(--color-success);
+}
+
+
 /* Contact page grid responsiveness */
 .contact-section .grid {
 	width: 100%;
@@ -5086,4 +5121,5 @@ svg + * {
     flex: 1;
     min-width: 150px;
   }
+
 }

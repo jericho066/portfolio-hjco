@@ -9,6 +9,49 @@ const certificateImages = {
 
 
 
+/**
+ * Trap focus within an element (for modals)
+ * @param {HTMLElement} element - Element to trap focus in
+ * @returns {Function} Cleanup function
+ */
+function trapFocus(element) {
+    const focusableElements = element.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+    
+    const handleTabKey = (e) => {
+        if (e.key !== 'Tab') return;
+        
+        if (e.shiftKey) {
+            // Shift + Tab
+            if (document.activeElement === firstElement) {
+                lastElement.focus();
+                e.preventDefault();
+            }
+        } else {
+            // Tab
+            if (document.activeElement === lastElement) {
+                firstElement.focus();
+                e.preventDefault();
+            }
+        }
+    };
+    
+    element.addEventListener('keydown', handleTabKey);
+    
+    // Focus first element
+    setTimeout(() => firstElement.focus(), 100);
+    
+    // Return cleanup function
+    return () => {
+        element.removeEventListener('keydown', handleTabKey);
+    };
+}
+
+
 function openCertificateModal(certificateId) {
 	const modal = document.getElementById('certificateModal');
 	const certificateImage = document.getElementById('certificateImage');
@@ -30,6 +73,13 @@ function openCertificateModal(certificateId) {
 	certificateImage.src = imagePath;
 	certificateImage.alt = `Certificate Preview - ${certificateId}`;
 	modal.classList.add('active');
+
+	// Trap focus in modal
+	const releaseFocus = trapFocus(modal);
+
+	// Store cleanup function
+	modal.setAttribute('data-focus-trap', 'active');
+	modal._releaseFocus = releaseFocus;
 	
 	// Prevent body scroll
 	document.body.style.overflow = 'hidden';
@@ -55,6 +105,13 @@ function closeCertificateModal() {
 	if (!modal) return;
 	
 	modal.classList.remove('active');
+
+	// Release focus trap
+	if (modal._releaseFocus) {
+		modal._releaseFocus();
+		modal._releaseFocus = null;
+	}
+	modal.removeAttribute('data-focus-trap');
 	
 	// Restore body scroll
 	document.body.style.overflow = '';

@@ -25,9 +25,18 @@
 	<link rel="stylesheet" href="/assets/css/components.css">
 	<link rel="stylesheet" href="/assets/css/utils.css">
 </head>
+
 <body>
-	<!-- Skip to Content -->
-	<a href="#main-content" class="skip-to-content">Skip to content</a>
+	<div 
+		id="announcer" 
+		class="sr-only" 
+		role="status" 
+		aria-live="polite" 
+		aria-atomic="true">
+	</div>
+
+	<a href="#main-content" class="skip-to-content">Skip to main content</a>
+	<a href="#navigation" class="skip-to-content">Skip to navigation</a>
 	
 	<!-- Header -->
 	<div id="header"></div>
@@ -70,28 +79,43 @@
 						<form id="contactForm" class="contact-form" novalidate>
 							<!-- Name -->
 							<div class="form-group">
-								<label for="name" class="form-label">Your Name *</label>
+								<label for="name" class="form-label">
+									Your Name 
+									<span aria-label="required" class="required-indicator">*</span>
+								</label>
+
 								<input 
 									type="text" 
 									id="name" 
 									name="name" 
 									class="form-input" 
 									placeholder="Name"
+									aria-required="true"
+									aria-invalid="false"
+									aria-describedby="name-error"
 									required
 								>
+								<span id="name-error" class="error-message" role="alert"></span>
 							</div>
 							
 							<!-- Email -->
 							<div class="form-group">
-								<label for="email" class="form-label">Email Address *</label>
+								<label for="email" class="form-label">
+									Email Address 
+									<span aria-label="required" class="required-indicator">*</span>
+								</label>
 								<input 
 									type="email" 
 									id="email" 
 									name="email" 
 									class="form-input" 
 									placeholder="Email"
+									aria-required="true"
+									aria-invalid="false"
+									aria-describedby="name-error"
 									required
 								>
+								<span id="name-error" class="error-message" role="alert"></span>
 							</div>
 							
 							<!-- Project Type -->
@@ -122,12 +146,18 @@
 							
 							<!-- Message -->
 							<div class="form-group">
-								<label for="message" class="form-label">Your Message *</label>
+								<label for="message" class="form-label">
+									Your Message
+									<span aria-label="required" class="required-indicator">*</span>
+								</label>
 								<textarea 
 									id="message" 
 									name="message" 
 									class="form-textarea" 
 									placeholder="Tell me about your project, timeline, and any specific requirements..."
+									aria-required="true"
+									aria-invalid="false"
+									aria-describedby="name-error"
 									required
 								></textarea>
 							</div>

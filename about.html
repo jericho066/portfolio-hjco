@@ -11,9 +11,69 @@
 	<meta property="og:title" content="About - Jerico Oliver">
 	<meta property="og:description" content="Frontend Developer specializing in React, JavaScript, and modern web technologies.">
 	<meta property="og:type" content="website">
+	
 
 	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#0f0f23" media="(prefers-color-scheme: dark)">
+
+	<!-- Person Schema -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Jerico Oliver",
+			"alternateName": "Hero Jerico Oliver",
+			"jobTitle": "Frontend Developer",
+			"description": "Freelance Frontend Developer specializing in React, JavaScript, and modern web applications. Based in Urdaneta City, Philippines.",
+			"url": "https://portfolio-hjco.vercel.app/",
+			"image": "https://portfolio-hjco.vercel.app/assets/img/me/home.png",
+			"sameAs": [
+				"https://github.com/jericho066",
+				"https://www.linkedin.com/in/hero-jerico-oliver-0a5113389/",
+				"https://www.facebook.com/hero.oliver.1/"
+			],
+			"knowsAbout": [
+				"React",
+				"JavaScript",
+				"HTML",
+				"CSS",
+				"Frontend Development",
+				"Web Development",
+				"Responsive Design",
+				"UI/UX Design",
+				"Bootstrap",
+				"Tailwind CSS",
+				"Git",
+				"Web Accessibility"
+			],
+			"knowsLanguage": [
+				{
+					"@type": "Language",
+					"name": "English"
+				},
+				{
+					"@type": "Language",
+					"name": "Filipino"
+				}
+			],
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "UrdanetaCity",
+				"addressRegion": "Ilocos Region",
+				"addressCountry": "PH"
+			},
+			"email": "oliverjerico97@gmail.com",
+			"hasOccupation": {
+				"@type": "Occupation",
+				"name": "Frontend Developer",
+				"occupationLocation": {
+					"@type": "City",
+					"name": "Urdaneta City"
+				},
+				"skills": "React, JavaScript, HTML, CSS, Bootstrap, Tailwind CSS, Git, Responsive Design"
+			}
+		}
+	</script>
 	
 	<title>About - Jerico Oliver</title>
 	
@@ -33,7 +93,16 @@
 	<link rel="stylesheet" href="/assets/css/utils.css">
 </head>
 <body>
-	<a href="#main-content" class="skip-to-content">Skip to content</a>
+	<div 
+		id="announcer" 
+		class="sr-only" 
+		role="status" 
+		aria-live="polite" 
+		aria-atomic="true">
+	</div>
+
+	<a href="#main-content" class="skip-to-content">Skip to main content</a>
+	<a href="#navigation" class="skip-to-content">Skip to navigation</a>
 	
 	<!-- Header -->
 	<div id="header"></div>
@@ -42,43 +111,43 @@
 	<main id="main-content">
 		<!-- About Hero -->
 		<section class="hero section-sm">
-		<div class="container">
-			<div class="grid md:grid-cols-2 gap-2xl items-center">
-				<!-- About Content -->
-				<div data-animate>
-					<h1 class="hero-title">
-						About Me
-					</h1>
+			<div class="container">
+				<div class="grid md:grid-cols-2 gap-2xl items-center">
+					<!-- About Content -->
+					<div data-animate>
+						<h1 class="hero-title">
+							About Me
+						</h1>
 
-					<p class="hero-subtitle">
-						I'm a frontend developer passionate about building clean, performant, and accessible web applications. 
-						With expertise in React, Bootstrap, and modern JavaScript, I transform designs into seamless user experiences.
-					</p>
+						<p class="hero-subtitle">
+							I'm a frontend developer passionate about building clean, performant, and accessible web applications. 
+							With expertise in React, Bootstrap, and modern JavaScript, I transform designs into seamless user experiences.
+						</p>
 
-					<p class="text-secondary mb-xl">
-						I specialize in creating responsive interfaces that work flawlessly across all devices, writing maintainable code, and collaborating with teams to bring digital products to life. 
-						When I'm not coding, I'm exploring new web technologies and contributing to open-source projects.
-					</p>
+						<p class="text-secondary mb-xl">
+							I specialize in creating responsive interfaces that work flawlessly across all devices, writing maintainable code, and collaborating with teams to bring digital products to life. 
+							When I'm not coding, I'm exploring new web technologies and contributing to open-source projects.
+						</p>
 
-					<a href="#skills" class="btn btn-primary mb-xs">My Skills</a>
-					<a href="/contact.html" class="btn btn-secondary ml-md">Get In Touch</a>
-				</div>
-			
-				<!-- About Image -->
-				<div class="hero-image" data-animate>
-					<div class="relative">
-						<!-- Placeholder for your photo -->
-						<div class="hero-profile-image">
-							<img src="assets/img/me/about.png" alt="">
+						<a href="#skills" class="btn btn-primary mb-xs">My Skills</a>
+						<a href="/contact.html" class="btn btn-secondary ml-md">Get In Touch</a>
+					</div>
+				
+					<!-- About Image -->
+					<div class="hero-image" data-animate>
+						<div class="relative">
+							<!-- Placeholder for your photo -->
+							<div class="hero-profile-image">
+								<img src="assets/img/me/about.png" alt="">
+							</div>
+							
+							<!-- Decorative Elements -->
+							<div class="shape deco-square-purple" style="top: -15px; left: -15px;"></div>
+							<div class="shape deco-circle-purple" style="bottom: 30px; right: -30px;"></div>
 						</div>
-						
-						<!-- Decorative Elements -->
-						<div class="shape deco-square-purple" style="top: -15px; left: -15px;"></div>
-						<div class="shape deco-circle-purple" style="bottom: 30px; right: -30px;"></div>
 					</div>
 				</div>
 			</div>
-		</div>
 		</section>
 		
 		<!-- Skills Section -->
@@ -471,7 +540,8 @@
 								<p class="text-secondary text-sm mb-md">2026 - Present</p>
 
 								<p class="text-secondary mb-md">
-									Building custom web applications for clients across various industries. Specializing in React-based solutions, responsive design, and performance optimization.
+									Building custom web applications for clients across various industries. 
+									Specializing in React-based solutions, responsive design, and performance optimization.
 								</p>
 
 								<div class="tags">

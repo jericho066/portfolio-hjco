@@ -9,7 +9,7 @@
 			"overview": "Dishlyst is a streamlined recipe finder designed for the modern web. Built with simplicity and user experience at its core, it helps users discover meal ideas from ingredients they already have. The application combines real-time search, favorite recipes management, and shopping list functionality into one responsive, intuitive interface.",
 			"category": "react",
 			"featured": true,
-			"heroImage": "/assets/img/projects/dishlyst/feature.png",
+			"heroImage": "/assets/img/projects/dishlyst/preview.png",
 			"techStack": [
 				{
 					"name": "React",
@@ -193,7 +193,7 @@
 			"overview": "Monivra is a modern expense tracking web application designed to help individuals take control of their personal finances. It allows users keep track of their income and expenses, see how they spend their money through charts, and handle transactions quickly, all while keeping the information on their own device for privacy.",
 			"category": "react",
 			"featured": true,
-			"heroImage": "/assets/img/projects/monivra/feature.png",
+			"heroImage": "/assets/img/projects/monivra/preview.png",
 			"techStack": [
 				{
 					"name": "React",
@@ -373,7 +373,7 @@
 			"overview": "Creavyn is a no-code portfolio builder designed specifically for developers who want to showcase their work without spending hours on design and development. It bridges the gap between generic website builders and custom-coded portfolios by offering a developer-focused, intuitive interface with powerful customization options. The goal was to create a tool that respects the creative process while dramatically reducing the time from concept to deployment.",
 			"category": "react",
 			"featured": true,
-			"heroImage": "/assets/img/projects/creavyn/feature.png",
+			"heroImage": "/assets/img/projects/creavyn/preview.png",
 			"techStack": [
 				{
 					"name": "React",
@@ -862,7 +862,7 @@
 			"category": "vanilla",
 			"featured": false,
 			"hasCaseStudy": false,
-			"heroImage": "/assets/img/projects/taskirra/dashboard.png",
+			"heroImage": "/assets/img/projects/flappy-bird/preview.png",
 			"liveUrl": "https://jericho066.github.io/flappy-bird-js/",
 			"repoUrl": "https://github.com/jericho066/flappy-bird-js",
 			"techStack": ["JavaScript", "HTML5 Canvas", "CSS"]

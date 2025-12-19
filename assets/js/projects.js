@@ -191,6 +191,15 @@ function initializeFilters() {
 			// Get filter value and filter projects
 			const filter = button.getAttribute('data-filter');
 			filterProjects(filter);
+
+			// Announce to screen readers
+			if (window.announcer) {
+				const filterName = filter === 'all' ? 'All projects' : 
+								filter === 'featured' ? 'Featured projects' :
+								filter.charAt(0).toUpperCase() + filter.slice(1) + ' projects';
+				window.announcer.announce(`Showing ${filterName}`);
+			}
+			
 		});
 		
 		// Keyboard support

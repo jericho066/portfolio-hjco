@@ -1,3 +1,35 @@
 User-agent: *
 Allow: /
-Sitemap: https://jericooliver.com/sitemap.xml
+Disallow: /assets/docs/
+
+# Sitemaps
+Sitemap: https://portfolio-hjco.vercel.app/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Specific rules for common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block AI scrapers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
