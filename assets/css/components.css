@@ -3816,14 +3816,6 @@ body {
 	line-height: var(--line-height-tight);
 }
 
-/* Certificate Description */
-.certificate-description {
-	font-size: var(--font-size-sm);
-	color: var(--text-secondary);
-	line-height: var(--line-height-relaxed);
-	margin-bottom: var(--space-lg);
-	flex: 1;
-}
 
 /* Progress Container */
 .progress-container {
