@@ -874,6 +874,11 @@ a:focus-visible,
 	background: linear-gradient(135deg, #333 0%, #000 100%);
 }
 
+.hero-social-link:nth-child(4):hover::before {
+	/* GitHub dark */
+	background: linear-gradient(135deg, #ce8585 0%, #e32929 100%);
+}
+
 /* Dark mode adjustments */
 [data-theme="dark"] .hero-social-link {
 	background: rgba(162, 155, 254, 0.1);
@@ -4145,14 +4150,6 @@ body {
 	transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* Light mode - Warm gradient */
-.theme-toggle::before {
-	background: linear-gradient(135deg, #ffd89b 0%, var(--color-primary-light) 100%);
-}
-
-[data-theme="dark"] .theme-toggle::before {
-	background: linear-gradient(135deg, #667eea 0%, var(--color-primary-dark) 100%);
-}
 
 /* Mobile responsiveness */
 @media (max-width: 767px) {
