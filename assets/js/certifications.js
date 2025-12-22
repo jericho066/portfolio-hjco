@@ -4,7 +4,7 @@
 const certificateImages = {
 	'fcc-rwdv8': '/assets/img/certifications/frontend/fcc-responsive-web-design.png',
 	'fcc-js': '/assets/img/certifications/frontend/fcc-javascript.png',
-	// 'fcc-fed': '/assets/img/certifications/frontend/fcc-frontend-libraries.png',
+	'fcc-fed': '/assets/img/certifications/frontend/fcc-frontend-libraries.png',
 };
 
 

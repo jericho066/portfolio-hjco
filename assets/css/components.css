@@ -3673,7 +3673,7 @@ body {
 	padding: var(--space-md) 0;
 }
 
-/* Provider Logo Container - for freeCodeCamp full text logo */
+/* Provider Logo Container  */
 .provider-logo-container {
 	background: #0a0a23;
 	border-radius: var(--radius-md);
@@ -3920,7 +3920,7 @@ body {
 }
 
 /* Coming Soon Card Styling */
-.certificate-card-coming-soon {
+/* .certificate-card-coming-soon {
 	opacity: 0.8;
 	position: relative;
 }
@@ -3939,7 +3939,7 @@ body {
 .certificate-card-coming-soon:hover {
 	opacity: 1;
 	transform: translateY(-4px);
-}
+} */
 
 /* Certificate Modal */
 .certificate-modal {
@@ -4140,9 +4140,17 @@ body {
 }
 
 @keyframes gradient-slide {
-	0% { background-position: 0% 50%; }
-	50% { background-position: 100% 50%; }
-	100% { background-position: 0% 50%; }
+	0% { 
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%; 
+	}
+
+	100% {
+		background-position: 0% 50%; 
+	}
 }
 
 /* Add smooth spring bounce to circle */
