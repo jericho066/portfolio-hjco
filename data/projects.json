@@ -866,6 +866,20 @@
 			"liveUrl": "https://jericho066.github.io/flappy-bird-js/",
 			"repoUrl": "https://github.com/jericho066/flappy-bird-js",
 			"techStack": ["JavaScript", "HTML5 Canvas", "CSS"]
+		},
+
+		{
+			"id": 7,
+			"slug": "science quiz app",
+			"title": "Science Quiz App",
+			"shortDescription": "A comprehensive, responsive web-based quiz application covering multiple science subjects",
+			"category": "vanilla",
+			"featured": false,
+			"hasCaseStudy": false,
+			"heroImage": "/assets/img/projects/quiz-app/preview.png",
+			"liveUrl": "https://jericho066.github.io/advance-interactive-science-quiz/",
+			"repoUrl": "https://github.com/jericho066/advance-interactive-science-quiz",
+			"techStack": ["JavaScript", "HTML5 Canvas", "CSS"]
 		}
 		
 
