@@ -687,7 +687,8 @@ function initStarryNight() {
 		generateStars(starsContainer, 30, 'stars-layer-2');
 		generateStars(starsContainer, 15, 'stars-layer-3');
 		
-		// Insert as first child
+		// Add shooting stars
+		createShootingStars(starsContainer);
 		hero.insertBefore(starsContainer, hero.firstChild);
 	});
 	
@@ -697,6 +698,32 @@ function initStarryNight() {
 // Expose globally
 window.initStarryNight = initStarryNight;
 
+
+function createShootingStars(container) {
+	// Define shooting star positions and timing
+	const shootingStarData = [
+		{ top: '20%', left: '10%', delay: '0s', duration: '3s' },
+		{ top: '40%', left: '60%', delay: '5s', duration: '4s' },
+		{ top: '70%', left: '30%', delay: '8s', duration: '3.5s' },
+		{ top: '15%', left: '80%', delay: '12s', duration: '3.2s' },
+		{ top: '60%', left: '5%', delay: '15s', duration: '3.8s' }
+	];
+	
+	shootingStarData.forEach((data, index) => {
+		const shootingStar = document.createElement('div');
+		shootingStar.className = 'shooting-star';
+		
+		// Apply position and timing
+		shootingStar.style.top = data.top;
+		shootingStar.style.left = data.left;
+		shootingStar.style.animationDelay = data.delay;
+		shootingStar.style.animationDuration = data.duration;
+		
+		container.appendChild(shootingStar);
+	});
+	
+	console.log(`Created ${shootingStarData.length} shooting stars`);
+}
 
 
 //? ==============================
