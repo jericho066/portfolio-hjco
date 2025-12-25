@@ -4554,8 +4554,8 @@ body {
 /* Shooting star effect */
 .shooting-star {
 	position: absolute;
-	width: 2px;
-	height: 2px;
+	width: 20px;
+	height: 1px;
 	background: white;
 	border-radius: 50%;
 	box-shadow: 0 0 4px rgba(255, 255, 255, 0.8),
