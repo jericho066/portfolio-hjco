@@ -688,7 +688,7 @@ function initStarryNight() {
 		generateStars(starsContainer, 15, 'stars-layer-3');
 		
 		// Add shooting stars
-		createShootingStars(starsContainer);
+		// createShootingStars(starsContainer);
 		hero.insertBefore(starsContainer, hero.firstChild);
 	});
 	
