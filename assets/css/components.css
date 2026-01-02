@@ -634,7 +634,7 @@ a:focus-visible,
 	width: 100%;
 	opacity: 0;
 	transform: translateY(100%);
-	animation: textSlide 12s infinite;
+	animation: textSlide 15s infinite;
 	white-space: nowrap;
 }
 
@@ -655,21 +655,25 @@ a:focus-visible,
 	animation-delay: 9s;
 }
 
+.hero-text-item:nth-child(5) {
+	animation-delay: 12s;
+}
+
 /* Slide and fade animation */
 @keyframes textSlide {
 	0% {
 		opacity: 0;
 		transform: translateY(100%);
 	}
-	5% {
+	4% {
 		opacity: 1;
 		transform: translateY(0);
 	}
-	25% {
+	20% {
 		opacity: 1;
 		transform: translateY(0);
 	}
-	30% {
+	24% {
 		opacity: 0;
 		transform: translateY(-100%);
 	}
