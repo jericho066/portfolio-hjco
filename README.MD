@@ -1,5 +1,6 @@
 # Hero Jerico Oliver
 
+<div align="center">
 <img src="assets/img/projects/portfolio/preview.png" width="500">
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-jericooliver.com-6c5ce7)](https://portfolio-hjco.vercel.app/)
@@ -7,6 +8,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717)](https://github.com/jericho066)
 
 > Professional portfolio showcasing frontend development projects and skills
+</div>
 
 ## About
 
