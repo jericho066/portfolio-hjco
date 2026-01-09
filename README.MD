@@ -1,4 +1,6 @@
-# Jerico Oliver - Frontend Developer Portfolio
+# Hero Jerico Oliver
+
+<img src="assets/img/projects/portfolio/preview.png" width="500">
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-jericooliver.com-6c5ce7)](https://portfolio-hjco.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5)](https://www.linkedin.com/in/hero-jerico-oliver-0a5113389/)
@@ -61,7 +63,7 @@ Feature-rich task management application
 
 ## License
 
-© 2025 Jerico Oliver. All rights reserved.
+© 2026 Jerico Oliver. All rights reserved.
 
 ---
 
